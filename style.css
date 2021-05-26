@@ -1,9 +1,13 @@
 body {
   font-family: "Neucha", cursive;
   display: flex;
+  flex-direction: column;
 }
 
-#front {
+#visitenkarte {
+  display: flex;
+}
+#visitenkarte #front {
   position: relative;
   height: 550px;
   width: 850px;
@@ -12,22 +16,21 @@ body {
   background-color: #D21146;
   z-index: -2;
 }
-#front .title {
+#visitenkarte #front .title {
   position: absolute;
   bottom: 40px;
   color: #E2F3F4;
   font-size: 48px;
   text-transform: uppercase;
 }
-
-#back {
+#visitenkarte #back {
   position: relative;
   background-color: #E2F3F4;
   height: 550px;
   width: 850px;
   z-index: -2;
 }
-#back .socials {
+#visitenkarte #back .socials {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -35,41 +38,40 @@ body {
   margin-left: 30px;
   color: #D21146;
 }
-#back .socials .link {
+#visitenkarte #back .socials .link {
   font-size: 30px;
   text-decoration: none;
   color: #D21146;
   display: flex;
 }
-#back .socials .link > * {
+#visitenkarte #back .socials .link > * {
   margin: 5px;
 }
-
-.head {
+#visitenkarte .head {
   height: 550px;
   width: 850px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.head .face {
+#visitenkarte .head .face {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.head .face .eyes {
+#visitenkarte .head .face .eyes {
   position: absolute;
   top: 150px;
   display: flex;
 }
-.head .face .eyes .eye {
+#visitenkarte .head .face .eyes .eye {
   background-color: #E2F3F4;
   height: 80px;
   width: 80px;
   border-radius: 50%;
   margin: 11px;
 }
-.head .face #upper-face {
+#visitenkarte .head .face #upper-face {
   background-color: #616161;
   position: absolute;
   top: 95px;
@@ -78,7 +80,7 @@ body {
   border-radius: 50%;
   z-index: -1;
 }
-.head .face #lower-face {
+#visitenkarte .head .face #lower-face {
   position: absolute;
   top: 170px;
   background-color: #616161;
@@ -87,11 +89,11 @@ body {
   border-radius: 50px;
   z-index: -1;
 }
-.head .mask {
+#visitenkarte .head .mask {
   position: absolute;
   top: 275px;
 }
-.head .mask .front {
+#visitenkarte .head .mask .front {
   background-color: #E2F3F4;
   z-index: 99;
   width: 236px;
@@ -102,56 +104,56 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.head .mask .front .dec {
+#visitenkarte .head .mask .front .dec {
   z-index: 99;
   margin: 5px;
   height: 10px;
   width: 100px;
   background-color: #616161;
 }
-.head .mask .front .small {
+#visitenkarte .head .mask .front .small {
   width: 80px;
 }
-.head .mask .strap {
+#visitenkarte .head .mask .strap {
   width: 145px;
   height: 25px;
   background-color: #E2F3F4;
 }
-.head .mask .top-left {
+#visitenkarte .head .mask .top-left {
   position: absolute;
   transform: rotate(45deg);
   border-radius: 0 0 0 50px;
   left: -50px;
   top: -10px;
 }
-.head .mask .bottom-right {
+#visitenkarte .head .mask .bottom-right {
   position: absolute;
   left: 120px;
   top: 45px;
   transform: rotate(-5deg);
-  border-radius: 0 0 50px 0;
+  border-radius: 0 0 15px 0;
 }
-.head .mask .top-right {
+#visitenkarte .head .mask .top-right {
   position: absolute;
   transform: rotate(-45deg);
   border-radius: 0 0 50px 0;
   left: 140px;
   top: -10px;
 }
-.head .mask .bottom-left {
+#visitenkarte .head .mask .bottom-left {
   position: absolute;
   left: -30px;
   top: 45px;
   transform: rotate(5deg);
-  border-radius: 0 0 0 50px;
+  border-radius: 0 0 0 15px;
 }
-.head .headphones {
+#visitenkarte .head .headphones {
   position: absolute;
   display: flex;
   justify-content: center;
   top: 40px;
 }
-.head .headphones .pad {
+#visitenkarte .head .headphones .pad {
   position: absolute;
   background-color: #616161;
   border-radius: 25px;
@@ -159,19 +161,19 @@ body {
   height: 144px;
   top: 120px;
 }
-.head .headphones .left {
+#visitenkarte .head .headphones .left {
   left: -20px;
 }
-.head .headphones .right {
+#visitenkarte .head .headphones .right {
   right: -20px;
 }
-.head .headphones .connector {
+#visitenkarte .head .headphones .connector {
   width: 355px;
   height: 130px;
   overflow: hidden;
   display: flex;
 }
-.head .headphones .connector .cable {
+#visitenkarte .head .headphones .connector .cable {
   border-radius: 50%;
   width: 355px;
   height: 260px;

@@ -3,177 +3,181 @@
 body {
     font-family: "Neucha", cursive;
     display: flex;
+    flex-direction: column;
 }
-#front {
-    position: relative;
-    height: 550px;
-    width: 850px;
+#visitenkarte {
     display: flex;
-    justify-content: center;
-    background-color: $primary;
-    z-index: -2;
-    .title {
-        position: absolute;
-        bottom: 40px;
-        color: $secondary;
-        font-size: 48px;
-        text-transform: uppercase;
-    }
-}
-
-#back {
-    position: relative;
-    background-color: $secondary;
-    height: 550px;
-    width: 850px;
-    z-index: -2;
-    .socials{
-        position: absolute;
+    #front {
+        position: relative;
+        height: 550px;
+        width: 850px;
         display: flex;
-        flex-direction: column;
-        bottom: 40px;
-        margin-left: 30px;
-        color: $primary;
-        .link{
-            font-size: 30px;
-            text-decoration: none;
-            color: $primary;
+        justify-content: center;
+        background-color: $primary;
+        z-index: -2;
+        .title {
+            position: absolute;
+            bottom: 40px;
+            color: $secondary;
+            font-size: 48px;
+            text-transform: uppercase;
+        }
+    }
+
+    #back {
+        position: relative;
+        background-color: $secondary;
+        height: 550px;
+        width: 850px;
+        z-index: -2;
+        .socials {
+            position: absolute;
             display: flex;
-            &>*{
-                margin: 5px;
+            flex-direction: column;
+            bottom: 40px;
+            margin-left: 30px;
+            color: $primary;
+            .link {
+                font-size: 30px;
+                text-decoration: none;
+                color: $primary;
+                display: flex;
+                & > * {
+                    margin: 5px;
+                }
             }
         }
     }
-}
-.head {
-    height: 550px;
-    width: 850px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .face {
+    .head {
+        height: 550px;
+        width: 850px;
         display: flex;
         justify-content: center;
         align-items: center;
-        .eyes {
-            position: absolute;
-            top: 150px;
-            display: flex;
-            .eye {
-                background-color: $secondary;
-                height: 80px;
-                width: 80px;
-                border-radius: 50%;
-                margin: 11px;
-            }
-        }
-        #upper-face {
-            background-color: $tertiary;
-            position: absolute;
-            top: 95px;
-            width: 280px;
-            height: 236px;
-            border-radius: 50%;
-            z-index: -1;
-        }
-        #lower-face {
-            position: absolute;
-            top: 170px;
-            background-color: $tertiary;
-            width: 280px;
-            height: 250px;
-            border-radius: 50px;
-            z-index: -1;
-        }
-    }
-    .mask {
-        position: absolute;
-        top: 275px;
-        .front {
-            background-color: $secondary;
-            z-index: 99;
-            width: 236px;
-            height: 120px;
-            border-radius: 25px;
+        .face {
             display: flex;
             justify-content: center;
-            flex-direction: column;
             align-items: center;
-            .dec {
-                z-index: 99;
-                margin: 5px;
-                height: 10px;
-                width: 100px;
+            .eyes {
+                position: absolute;
+                top: 150px;
+                display: flex;
+                .eye {
+                    background-color: $secondary;
+                    height: 80px;
+                    width: 80px;
+                    border-radius: 50%;
+                    margin: 11px;
+                }
+            }
+            #upper-face {
                 background-color: $tertiary;
-            }
-            .small {
-                width: 80px;
-            }
-        }
-        .strap {
-            width: 145px;
-            height: 25px;
-            background-color: $secondary;
-        }
-        .top-left {
-            position: absolute;
-            transform: rotate(45deg);
-            border-radius: 0 0 0 50px;
-            left: -50px;
-            top: -10px;
-        }
-        .bottom-right {
-            position: absolute;
-            left: 120px;
-            top: 45px;
-            transform: rotate(-5deg);
-            border-radius: 0 0 50px 0;
-        }
-        .top-right {
-            position: absolute;
-            transform: rotate(-45deg);
-            border-radius: 0 0 50px 0;
-            left: 140px;
-            top: -10px;
-        }
-        .bottom-left {
-            position: absolute;
-            left: -30px;
-            top: 45px;
-            transform: rotate(5deg);
-            border-radius: 0 0 0 50px;
-        }
-    }
-    .headphones {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 40px;
-        .pad {
-            position: absolute;
-            background-color: $tertiary;
-            border-radius: 25px;
-            width: 40px;
-            height: 144px;
-            top: 120px;
-        }
-        .left {
-            left: -20px;
-        }
-        .right {
-            right: -20px;
-        }
-        .connector {
-            width: 355px;
-            height: 130px;
-            overflow: hidden;
-            display: flex;
-
-            .cable {
+                position: absolute;
+                top: 95px;
+                width: 280px;
+                height: 236px;
                 border-radius: 50%;
+                z-index: -1;
+            }
+            #lower-face {
+                position: absolute;
+                top: 170px;
+                background-color: $tertiary;
+                width: 280px;
+                height: 250px;
+                border-radius: 50px;
+                z-index: -1;
+            }
+        }
+        .mask {
+            position: absolute;
+            top: 275px;
+            .front {
+                background-color: $secondary;
+                z-index: 99;
+                width: 236px;
+                height: 120px;
+                border-radius: 25px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                .dec {
+                    z-index: 99;
+                    margin: 5px;
+                    height: 10px;
+                    width: 100px;
+                    background-color: $tertiary;
+                }
+                .small {
+                    width: 80px;
+                }
+            }
+            .strap {
+                width: 145px;
+                height: 25px;
+                background-color: $secondary;
+            }
+            .top-left {
+                position: absolute;
+                transform: rotate(45deg);
+                border-radius: 0 0 0 50px;
+                left: -50px;
+                top: -10px;
+            }
+            .bottom-right {
+                position: absolute;
+                left: 120px;
+                top: 45px;
+                transform: rotate(-5deg);
+                border-radius: 0 0 15px 0;
+            }
+            .top-right {
+                position: absolute;
+                transform: rotate(-45deg);
+                border-radius: 0 0 50px 0;
+                left: 140px;
+                top: -10px;
+            }
+            .bottom-left {
+                position: absolute;
+                left: -30px;
+                top: 45px;
+                transform: rotate(5deg);
+                border-radius: 0 0 0 15px;
+            }
+        }
+        .headphones {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 40px;
+            .pad {
+                position: absolute;
+                background-color: $tertiary;
+                border-radius: 25px;
+                width: 40px;
+                height: 144px;
+                top: 120px;
+            }
+            .left {
+                left: -20px;
+            }
+            .right {
+                right: -20px;
+            }
+            .connector {
                 width: 355px;
-                height: 260px;
-                border: 10px solid $tertiary;
+                height: 130px;
+                overflow: hidden;
+                display: flex;
+
+                .cable {
+                    border-radius: 50%;
+                    width: 355px;
+                    height: 260px;
+                    border: 10px solid $tertiary;
+                }
             }
         }
     }
